@@ -1,0 +1,38 @@
+# 知识点：
+# 1、feign调用相关参数配置，例如调用超时时间
+# 2、整合spring-cloud-circuit-breaker断路器
+# 3、feign 拦截器使用
+# 4、@SpringQueryMap get传参问题
+
+
+# feign配置见：https://docs.spring.io/spring-cloud-openfeign/docs/3.1.8/reference/html/appendix.html
+feign:
+  circuitbreaker:
+    enabled: true # 是否启用断路器功能，默认false
+  client:
+    config:
+      default: # default表示默认所有服务的配置，如果某个服务需要特殊性配置，将default替换成服务名即可
+        connect-timeout: 500 # 设置请求连接最大超时时间
+        read-timeout: 1000 # 设置连接建立后，到响应的最大超时时间
+        logger-level: full # 设置feign调用日志打印级别（feign默认是不开启调用日志的，这边需要设置打开，且要保证logback中对应包日志输出级别为debug）
+
+server:
+  port: 8000
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+        service: feign-consumer
+    circuitbreaker:
+      sentinel:
+        enabled: true # 启动sentinel断路器功能，默认为true
+
+
+
+
+
