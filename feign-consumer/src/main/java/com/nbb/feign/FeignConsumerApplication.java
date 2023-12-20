@@ -1,9 +1,11 @@
 package com.nbb.feign;
 
+import com.nbb.feign.framework.springcloudloadbalancer.MyLoadBalancerClientConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
@@ -12,6 +14,7 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = {"com.nbb.feign.client"})
+//@LoadBalancerClients(defaultConfiguration = MyLoadBalancerClientConfiguration.class)
 public class FeignConsumerApplication {
 
     public static void main(String[] args) {
