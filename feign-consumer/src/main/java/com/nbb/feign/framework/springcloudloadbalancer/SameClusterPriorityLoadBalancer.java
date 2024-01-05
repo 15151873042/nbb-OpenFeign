@@ -1,6 +1,7 @@
 package com.nbb.feign.framework.springcloudloadbalancer;
 
 import com.alibaba.cloud.nacos.NacosServiceInstance;
+import com.alibaba.cloud.nacos.loadbalancer.NacosLoadBalancer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.cloud.client.ServiceInstance;
@@ -12,13 +13,17 @@ import org.springframework.cloud.loadbalancer.core.NoopServiceInstanceListSuppli
 import org.springframework.cloud.loadbalancer.core.ReactorServiceInstanceLoadBalancer;
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
 import org.springframework.util.CollectionUtils;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+/**
+ * 集群名称相同的优先调用，
+ * nacos好像有对应实现了
+ * @see NacosLoadBalancer
+ */
 @Slf4j
 public class SameClusterPriorityLoadBalancer implements ReactorServiceInstanceLoadBalancer {
 
