@@ -1,9 +1,9 @@
-package com.nbb.feign.controller;
+package com.nbb.feign.provider.controller;
 
 import cn.hutool.core.map.MapUtil;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
-import com.nbb.feignApi.api.TestApi;
-import com.nbb.feignApi.domain.ParamDTO;
+import com.nbb.feign.providerapi.api.TestApi;
+import com.nbb.feign.providerapi.domain.ParamDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

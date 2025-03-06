@@ -1,0 +1,18 @@
+### @RequestBody请求示例
+POST {{baseUrl}}/test/@RequestBody
+Content-Type: application/json
+tag: hp
+
+{
+  "name": "张三",
+  "age": 10
+}
+
+### GET请求传参示例
+GET {{baseUrl}}/test/getMappingParam?a=1&b=2
+Content-Type: application/x-www-form-urlencoded
+
+### 占位符传参示例
+POST {{baseUrl}}/test/@PathVariable/zhangsan
+Content-Type: application/x-www-form-urlencoded
+

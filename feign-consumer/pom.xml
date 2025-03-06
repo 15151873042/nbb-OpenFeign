@@ -21,6 +21,11 @@
     <dependencies>
         <dependency>
             <groupId>com.nbb</groupId>
+            <artifactId>nbb-spring-cloud-env</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.nbb</groupId>
             <artifactId>feign-prodiver-api</artifactId>
             <version>1.0</version>
         </dependency>

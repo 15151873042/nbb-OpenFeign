@@ -32,8 +32,8 @@ spring:
     circuitbreaker:
       sentinel:
         enabled: true # 启动sentinel断路器功能，默认为true
-
-
+env:
+  tag: hp
 
 
 

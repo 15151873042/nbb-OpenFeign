@@ -11,6 +11,6 @@ spring:
         password: nacos
         service: feign-provider
         cluster-name: nanJing
-
-
+env:
+  tag: hp
 

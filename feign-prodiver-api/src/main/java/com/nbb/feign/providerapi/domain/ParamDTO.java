@@ -1,4 +1,4 @@
-package com.nbb.feignApi.domain;
+package com.nbb.feign.providerapi.domain;
 
 import lombok.Data;
 

@@ -1,9 +1,7 @@
-package com.nbb.feign.controller;
+package com.nbb.feign.provider.controller;
 
 import cn.hutool.core.map.MapUtil;
-import cn.hutool.extra.servlet.ServletUtil;
-import com.nbb.feignApi.api.UserApi;
-import org.springframework.web.bind.annotation.RequestHeader;
+import com.nbb.feign.providerapi.api.UserApi;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.RequestContextHolder;
